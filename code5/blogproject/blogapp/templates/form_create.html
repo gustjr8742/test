@@ -1,0 +1,9 @@
+<h1>django form을 이용한 새 글 작성 페이지</h1>
+<form action ="" method = "POST" enctype="multipart/form-data"> <!-- 파일 업로드를 하게된다면 이렇게 지정해줘야한다.-->
+    {% csrf_token %} <!-- csrf 해킹을 방지하기 위해 작성하는 코드-->
+    <table>
+        {{ form.as_table }} <!--views.py에서 render()의 세번째 인자로 넘겨준 데이터는 html 내에서 중괄호 두개 에 감싸진 채로 표현될 수 있다.-->
+    </table>
+    <input type = "submit" value = "새 글 생성하기">
+</form>
+
